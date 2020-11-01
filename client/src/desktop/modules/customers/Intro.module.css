@@ -1,0 +1,47 @@
+.intro_wrapper {
+  background-color: #404040;
+  margin: 0;
+}
+
+.image_wrapper {
+  display: flex;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.image_wrapper article {
+  width: 30%;
+  margin: 2%;
+}
+.image_wrapper article img {
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  border: solid 1px orange;
+}
+
+.title {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 50px;
+  font-size: 20px;
+  color: orange;
+}
+.title h1 {
+  margin: 0;
+}
+.button_wrapper {
+  margin-left: 44%;
+  text-decoration: none;
+  border-radius: 14px;
+  background: black;
+  font-size: 40px;
+  color: orange;
+  padding: 10px;
+}
+
+.button_wrapper:hover {
+  background: orange;
+  cursor: pointer;
+  color: black;
+}

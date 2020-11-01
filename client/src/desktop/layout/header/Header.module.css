@@ -1,0 +1,37 @@
+.header_wrapper {
+  height: 1%;
+  background: black;
+  color: white;
+}
+
+.logo_wrapper {
+  display: inline-block;
+  margin-left: 10px;
+}
+.logo_wrapper a {
+  text-decoration: none;
+  color: white;
+}
+
+.navigation {
+  display: inline-block;
+  list-style-type: none;
+}
+.navigation a {
+  display: inline-block;
+  margin: 10px;
+
+  color: orange;
+  text-decoration: none;
+}
+
+.login {
+  float: right;
+  margin: 26px;
+  text-decoration: none;
+  color: orange;
+}
+
+.login:hover {
+  text-decoration: underline;
+}
