@@ -29,6 +29,9 @@ app.use("/api/insurance", insuranceRouter);
 const contractRouter = require("./routes/contract/contract");
 app.use("/api/contract", contractRouter);
 
+const signInRouter = require("./routes/signIn/signIn");
+app.use("/api/sign-in", signInRouter);
+
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });

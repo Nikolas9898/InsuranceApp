@@ -13,23 +13,29 @@ function Intro(props) {
       </section>
 
       <section className={IntroCSS.image_wrapper}>
-        <article>
-          <img src={CarImage} />
+        <article className={IntroCSS.image_wrapper_article}>
+          <Link to={{ pathname: "/insurance", state: "Car", price: 1000 }}>
+            <img src={CarImage} />
+          </Link>
         </article>
 
-        <article>
+        <article className={IntroCSS.image_wrapper_article}>
           {" "}
-          <img src={HouseImage} />
+          <Link to={{ pathname: "/insurance", state: "House", price: 10000 }}>
+            <img src={HouseImage} />
+          </Link>
         </article>
 
-        <article>
+        <article className={IntroCSS.image_wrapper_article}>
           {" "}
-          <img src={FamillyImage} />
+          <Link to={{ pathname: "/insurance", state: "Family", price: 100000 }}>
+            <img src={FamillyImage} />
+          </Link>
         </article>
       </section>
-      <Link to={"/insurance"} className={IntroCSS.button_wrapper}>
+      {/* <Link to={"/insurance"} className={IntroCSS.button_wrapper}>
         Buy Insurance
-      </Link>
+      </Link> */}
     </div>
   );
 }

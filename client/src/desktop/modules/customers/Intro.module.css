@@ -9,10 +9,20 @@
   margin-bottom: 50px;
 }
 
-.image_wrapper article {
+.image_wrapper_article {
   width: 30%;
   margin: 2%;
 }
+
+.image_wrapper_article:hover {
+  border: solid 5px orange;
+  border-radius: 22px;
+}
+
+.image_wrapper aritcle :hover {
+  width: 40%;
+}
+
 .image_wrapper article img {
   width: 100%;
   height: 100%;

@@ -25,10 +25,15 @@ function InsuranceContainer(props) {
     <div className={InsuranceCss.form_wrapper}>
       <form className={InsuranceCss.form_body}>
         <label>Тип на застраховката</label>
+
         <input
           type="text"
           name="type"
-          value={insurance.type}
+          value={
+            props.insuranceState === "undefined"
+              ? insurance.type
+              : props.insuranceState
+          }
           onChange={handleInputChange}
         />
 
@@ -40,13 +45,20 @@ function InsuranceContainer(props) {
           onChange={handleInputChange}
         />
 
-        <label>Цена</label>
+        {/* <label>Цена</label>
         <input
           type="number"
           name="price"
           value={insurance.price}
           onChange={handleInputChange}
-        />
+        /> */}
+
+        <span>
+          Общо:
+          {props.insurancePrice === undefined ? " 200" : props.insurancePrice}
+          лв
+          {console.log(Number(props.insurancePrice))}
+        </span>
       </form>
       <button onClick={createInsurance}>Create</button>
     </div>
