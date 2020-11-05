@@ -22,13 +22,14 @@ function LoginContainer(props) {
         if (response.data.errorMSG) {
           setLoginError(response.data.errorMSG);
         } else {
+          localStorage.setItem("jwt", response.data.token);
           saveUser(response.data);
           setLoginError("");
           history.push("/");
         }
       })
       .catch((e) => {
-        setLoginError(e);
+        setLoginError("Something went wrong");
       });
   }
 

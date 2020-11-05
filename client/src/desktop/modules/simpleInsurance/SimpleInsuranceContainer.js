@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import SimpleInsuranceStyle from "./SimpleInsurance.module.css";
 import axios from "axios";
-import InsuranceCss from "./Insurance.module.css";
 
-function InsuranceContainer(props) {
+function SimpleInsuranceContainer(props) {
   const [insurance, setInsurance] = useState({
     price: "",
     name: "",
@@ -22,8 +22,8 @@ function InsuranceContainer(props) {
   };
 
   return (
-    <div className={InsuranceCss.form_wrapper}>
-      <form className={InsuranceCss.form_body}>
+    <div className={SimpleInsuranceStyle.form_wrapper}>
+      <form className={SimpleInsuranceStyle.form_body}>
         <label>Тип на застраховката</label>
 
         <input
@@ -45,17 +45,24 @@ function InsuranceContainer(props) {
           onChange={handleInputChange}
         />
 
-        <label>Цена</label>
-        <input
-          type="number"
-          name="price"
-          value={insurance.price}
-          onChange={handleInputChange}
-        />
+        {/* <label>Цена</label>
+      <input
+        type="number"
+        name="price"
+        value={insurance.price}
+        onChange={handleInputChange}
+      /> */}
+
+        <span>
+          Общо:
+          {props.insurancePrice === undefined ? " 200" : props.insurancePrice}
+          лв
+          {console.log(Number(props.insurancePrice))}
+        </span>
       </form>
       <button onClick={createInsurance}>Create</button>
     </div>
   );
 }
 
-export default InsuranceContainer;
+export default SimpleInsuranceContainer;

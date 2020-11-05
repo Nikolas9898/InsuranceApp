@@ -1,0 +1,45 @@
+.form_wrapper {
+  margin: auto;
+  width: 36%;
+  border: 3px solid orange;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10%;
+  color: orange;
+  height: 400px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.form_body {
+  display: flex;
+  flex-flow: column;
+}
+
+.form_body label {
+  padding-top: 20px;
+  display: inline;
+  margin-bottom: 15px;
+}
+
+.form_body input {
+  width: 40%;
+  margin: auto;
+  height: 20px;
+  font-size: 20px;
+}
+.form_wrapper button {
+  border: 1px solid;
+  border-radius: 5px;
+  height: 30px;
+  width: 40%;
+  margin: auto;
+  margin-top: 120px;
+  background: orange;
+}
+
+.form_wrapper button:hover {
+  background: black;
+  color: orange;
+  cursor: pointer;
+}

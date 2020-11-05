@@ -48,4 +48,22 @@ router.route("/create").post((req, res) => {
   //     });
 });
 
+router.route("/").get((req, res) => {
+  Insurance.find()
+    .then((insurances) => res.json(insurances))
+    .catch((err) => res.status(400).json("Error: " + err));
+});
+
+router.route("/delete/:id").delete((req, res) => {
+  Insurance.findByIdAndDelete(req.params.id)
+    .then(() => res.json("Insurance deleted."))
+    .catch((err) => res.status(400).json("Error: " + err));
+});
+
+router.route("/:name").get((req, res) => {
+  Insurance.find({ name: req.params.name })
+    .then((insurance) => res.json(insurance))
+    .catch((err) => res.status(400).json("Error: " + err));
+});
+
 module.exports = router;

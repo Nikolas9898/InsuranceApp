@@ -1,9 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
-import InsurancePage from "./pages/InsurancePage/InsurancePage";
+import AdminInsurancePage from "./pages/InsurancePage/InsurancePage";
+import OrdinaryInsurancePage from "./pages/OrdinaryInsurancePage/OrdinaryInsurancePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import { UserProvider } from "./context/UserContext";
+
+import { AuthenticatedRoute } from "./helpers/AuthRoute";
 
 const Routes = (props) => {
   return (
@@ -11,8 +14,15 @@ const Routes = (props) => {
       <Router>
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/insurance" component={InsurancePage} />
+          <Route path="/insurance-contract" component={OrdinaryInsurancePage} />
           <Route path="/login" component={LoginPage} />
+
+          <AuthenticatedRoute
+            exact
+            path="/admin/insurance"
+            component={AdminInsurancePage}
+          />
+
           {/* <Route path="/subjects/:year" exact component={SubjectsPage} />
         <Route path="/category/:slug" exact component={CategoryProductsPage} />
         <Route path="/login" exact component={Login} />

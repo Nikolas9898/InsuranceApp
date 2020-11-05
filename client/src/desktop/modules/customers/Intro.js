@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import CarImage from "../../images/carImage.jpeg";
 import HouseImage from "../../images/houseImage.jpeg";
@@ -14,22 +14,36 @@ function Intro(props) {
 
       <section className={IntroCSS.image_wrapper}>
         <article className={IntroCSS.image_wrapper_article}>
-          <Link to={{ pathname: "/insurance", state: "Car", price: 1000 }}>
-            <img src={CarImage} />
+          <Link
+            to={{ pathname: "/insurance-contract", state: "Car", price: 1000 }}
+          >
+            <img src={CarImage} alt="Something went wrong" />
           </Link>
         </article>
 
         <article className={IntroCSS.image_wrapper_article}>
           {" "}
-          <Link to={{ pathname: "/insurance", state: "House", price: 10000 }}>
-            <img src={HouseImage} />
+          <Link
+            to={{
+              pathname: "/insurance-contract",
+              state: "House",
+              price: 10000,
+            }}
+          >
+            <img src={HouseImage} alt="Something went wrong" />
           </Link>
         </article>
 
         <article className={IntroCSS.image_wrapper_article}>
           {" "}
-          <Link to={{ pathname: "/insurance", state: "Family", price: 100000 }}>
-            <img src={FamillyImage} />
+          <Link
+            to={{
+              pathname: "/insurance-contract",
+              state: "Family",
+              price: 100000,
+            }}
+          >
+            <img src={FamillyImage} alt="Something went wrong" />
           </Link>
         </article>
       </section>

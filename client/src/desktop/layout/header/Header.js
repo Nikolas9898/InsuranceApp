@@ -14,6 +14,8 @@ function Header(props) {
       <ul className={HeaderStyle.navigation}>
         <Link to={"/about"}>About</Link>
         <Link to={"/contact"}>Contact</Link>
+
+        <Link to={"/admin/insurance"}>Insurance</Link>
       </ul>
 
       {user.foundUser ? (
