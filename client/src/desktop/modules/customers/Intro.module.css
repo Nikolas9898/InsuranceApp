@@ -1,6 +1,7 @@
 .intro_wrapper {
   background-color: #404040;
   margin: 0;
+  min-height: calc(100vh - 520px);
 }
 
 .image_wrapper {

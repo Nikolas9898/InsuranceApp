@@ -15,7 +15,11 @@ function Intro(props) {
       <section className={IntroCSS.image_wrapper}>
         <article className={IntroCSS.image_wrapper_article}>
           <Link
-            to={{ pathname: "/insurance-contract", state: "Car", price: 1000 }}
+            to={{
+              pathname: "/insurance-contract",
+              state: "Car",
+              price: 2000,
+            }}
           >
             <img src={CarImage} alt="Something went wrong" />
           </Link>

@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import AdminInsurancePage from "./pages/InsurancePage/InsurancePage";
-import OrdinaryInsurancePage from "./pages/OrdinaryInsurancePage/OrdinaryInsurancePage";
+import InsuranceContract from "./pages/InsuranceContract/InsuranceContract";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import { UserProvider } from "./context/UserContext";
 
@@ -14,7 +14,7 @@ const Routes = (props) => {
       <Router>
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/insurance-contract" component={OrdinaryInsurancePage} />
+          <Route path="/insurance-contract" component={InsuranceContract} />
           <Route path="/login" component={LoginPage} />
 
           <AuthenticatedRoute

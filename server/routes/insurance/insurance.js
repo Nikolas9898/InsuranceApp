@@ -62,7 +62,7 @@ router.route("/delete/:id").delete((req, res) => {
 
 router.route("/:name").get((req, res) => {
   Insurance.find({ name: req.params.name })
-    .then((insurance) => res.json(insurance))
+    .then((insurance) => res.json(insurance[0]))
     .catch((err) => res.status(400).json("Error: " + err));
 });
 

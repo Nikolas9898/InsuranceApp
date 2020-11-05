@@ -12,7 +12,7 @@ export function useUserUpdate() {
 }
 
 export function UserProvider({ children }) {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState("");
 
   function saveUser(e) {
     setUser(e);

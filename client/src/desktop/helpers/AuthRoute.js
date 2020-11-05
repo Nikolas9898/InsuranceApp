@@ -17,10 +17,19 @@ export function AuthenticatedRoute(props) {
   console.log(user);
 
   // route requires admin priv
-  if (user.foundUser.type === "admin") {
+
+  if (user === "") {
+    hystory.push("/");
+  } else if (user.foundUser.type === "admin") {
     return <props.component {...props} />;
   } else {
     hystory.push("/");
   }
+
+  // if (user.foundUser.type === "admin") {
+  //   return <props.component {...props} />;
+  // } else {
+  //   hystory.push("/");
+  // }
   return <props.component {...props} />;
 }
