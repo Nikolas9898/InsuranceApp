@@ -12,22 +12,16 @@ function CarForm({
   return (
     <div className={CarFormStyle.form_wrapper}>
       <form className={CarFormStyle.form_body}>
-        <label>{insuranceType}</label>
+        <label>{insuranceType} insurance</label>
 
         {/* <input
           type="text"
           name="type"
           value={insuranceType}
           onChange={handleInputChange}
-        />
-
-        <label>Име на застраховката</label>
-        <input
-          type="text"
-          name="name"
-          value={insurance.name}
-          onChange={createContract}
         /> */}
+
+        <label>Experience</label>
         <input
           name="experience"
           type="number"
@@ -35,11 +29,35 @@ function CarForm({
           onChange={handleInputChange}
         />
 
+        <label>Details</label>
+
         <textarea
           name="details"
           value={insuranceContract.details}
           onChange={handleInputDetails}
         />
+
+        <label>Final Price:</label>
+
+        {(carFormState.experience === "" && (
+          <span>{insuranceContract.finalPrice} lv</span>
+        )) ||
+          (Number(carFormState.experience) >= 10 && (
+            <div>
+              <span>Discount: 10%</span>
+              {insuranceContract.finalPrice -
+                insuranceContract.finalPrice * (10 / 100)}
+              lv
+            </div>
+          )) ||
+          (Number(carFormState.experience) <= 3 && (
+            <div>
+              <span>Risk Tax: 10%</span>
+              {insuranceContract.finalPrice +
+                insuranceContract.finalPrice * (10 / 100)}
+              lv
+            </div>
+          ))}
       </form>
       <button onClick={createContract}>Create</button>
     </div>

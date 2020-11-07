@@ -20,8 +20,6 @@ router.route("/create").post((req, res) => {
     finalPrice,
   });
 
-  console.log(newContract);
-
   newContract
     .save()
     .then(() => res.json(newContract))
@@ -50,6 +48,18 @@ router.route("/create").post((req, res) => {
   //     .catch((err) => {
   //       res.status(400).json("Error: " + err);
   //     });
+});
+
+router.route("/").get((req, res) => {
+  Contract.find()
+    .then((contracts) => res.json(contracts))
+    .catch((err) => res.status(400).json("Error: " + err));
+});
+
+router.route("/delete/:id").delete((req, res) => {
+  Contract.findByIdAndDelete(req.params.id)
+    .then(() => res.json("Contract deleted."))
+    .catch((err) => res.status(400).json("Error: " + err));
 });
 
 module.exports = router;

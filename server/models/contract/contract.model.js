@@ -6,7 +6,6 @@ const contractSchema = new Schema(
   {
     customerId: {
       type: String,
-      unique: true,
       required: true,
       trim: true,
       minlength: 3,
