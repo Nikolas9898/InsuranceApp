@@ -15,11 +15,11 @@ function Header(props) {
         <Link to={"/about"}>About</Link>
         <Link to={"/contact"}>Contact</Link>
 
-        <Link to={"/admin/insurance"}>Insurance</Link>
+        {user === "" ? "" : <Link to={"/admin/insurances"}>Insurance</Link>}
       </ul>
 
-      {user.foundUser ? (
-        <div className={HeaderStyle.login}>{user.foundUser.username}</div>
+      {user ? (
+        <div className={HeaderStyle.login}>{user.username}</div>
       ) : (
         <Link className={HeaderStyle.login} to={"/login"}>
           Login

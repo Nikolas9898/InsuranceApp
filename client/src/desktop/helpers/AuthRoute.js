@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import jwt_decode from "jwt-decode";
 import { useUser } from "../context/UserContext";
 import { useHistory } from "react-router-dom";
+import axios from "axios";
 
 // let token;
 
@@ -20,7 +21,7 @@ export function AuthenticatedRoute(props) {
 
   if (user === "") {
     hystory.push("/");
-  } else if (user.foundUser.type === "admin") {
+  } else if (user.type === "admin") {
     return <props.component {...props} />;
   } else {
     hystory.push("/");

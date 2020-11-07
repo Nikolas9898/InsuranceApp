@@ -19,7 +19,7 @@ const Routes = (props) => {
 
           <AuthenticatedRoute
             exact
-            path="/admin/insurance"
+            path="/admin/insurances"
             component={AdminInsurancePage}
           />
 

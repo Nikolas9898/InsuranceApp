@@ -1,0 +1,30 @@
+.insuranceTable {
+  margin-top: 30px;
+  margin-left: 30px;
+  color: orange;
+  border: 1px solid orange;
+}
+
+.insuranceTable table,
+td,
+th {
+  border: 1px solid orange;
+  padding: 10px;
+}
+.insuranceTable tr {
+  text-align: center;
+}
+
+.insuranceTable tr:hover {
+  background: black;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+th {
+  height: 70px;
+}
