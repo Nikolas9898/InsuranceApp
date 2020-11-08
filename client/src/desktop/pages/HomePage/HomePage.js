@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../../layout/footer/Footer";
 import Header from "../../layout/header/Header";
-import Intro from "../../modules/customers/Intro";
+import Intro from "../../modules/intro/Intro";
 // import { useUser } from "../../context/ThemeContext";
 
 function HomePage(props) {

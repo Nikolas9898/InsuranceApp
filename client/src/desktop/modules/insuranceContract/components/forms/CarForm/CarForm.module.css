@@ -45,7 +45,11 @@
 }
 
 .form_body textarea {
-  height: 80px;
+  width: 40%;
+  margin: auto;
+  height: 20px;
+  font-size: 20px;
+  height: 100px;
 }
 .form_body span {
   display: block;

@@ -28,6 +28,12 @@
   height: 20px;
   font-size: 20px;
 }
+.form_body textarea {
+  width: 40%;
+  margin: auto;
+  height: 20px;
+  font-size: 20px;
+}
 .form_wrapper button {
   border: 1px solid;
   border-radius: 5px;

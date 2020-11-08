@@ -123,7 +123,6 @@ function InsuranceContract(props) {
 
   return (
     <React.Fragment>
-      {console.log(houseFormState)}
       {props.insuranceState === "Car" ? (
         <CarForm
           handleInputDetails={handleInputDetails}

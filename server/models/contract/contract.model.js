@@ -4,13 +4,15 @@ const Schema = mongoose.Schema;
 
 const contractSchema = new Schema(
   {
-    customerId: {
-      type: String,
+    customer: {
+      type: Object,
       required: true,
-      trim: true,
-      minlength: 3,
     },
-    insuranceId: {
+    insurance: {
+      type: Object,
+      required: true,
+    },
+    customerId: {
       type: String,
       required: true,
       trim: true,

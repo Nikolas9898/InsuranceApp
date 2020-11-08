@@ -16,6 +16,8 @@ function Header(props) {
         <Link to={"/contact"}>Contact</Link>
 
         {user === "" ? "" : <Link to={"/admin/insurances"}>Insurance</Link>}
+
+        {user === "" ? "" : <Link to={"contracts"}>Contracts</Link>}
       </ul>
 
       {user ? (
