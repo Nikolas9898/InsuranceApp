@@ -30,7 +30,7 @@ router.route("/sign-up").post((req, res) => {
     .save()
     .then(() => res.json(user))
     .catch((err) => {
-      res.status(400).json("Error: " + err);
+      res.status(400).json({ err });
     });
 });
 

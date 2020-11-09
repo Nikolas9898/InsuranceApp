@@ -1,14 +1,15 @@
 import React from "react";
 
-function ContractsTableHeader(props) {
+function ContractsTableHeader({ user }) {
   return (
     <tr>
       <th>Customer Name</th>
       <th>Details</th>
       <th>Price</th>
       <th>Created</th>
-      <th>Delete</th>
-      <th>Edit</th>
+
+      {user.type === "admin" && <th>Delete</th>}
+      {user.type === "admin" && <th>Edit</th>}
     </tr>
   );
 }

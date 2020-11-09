@@ -35,10 +35,24 @@ function ContractsContainer(props) {
       });
   };
 
+  const deleteContract = (e) => {
+    let contractId = e;
+
+    axios
+      .delete(`http://localhost:5000/api/contract/delete/${contractId}`)
+      .then((res) => {
+        getAllContracts();
+      });
+  };
+
   return (
     <React.Fragment>
       {contracts ? (
-        <ContractsListTable contracts={contracts} />
+        <ContractsListTable
+          user={user}
+          contracts={contracts}
+          deleteContract={deleteContract}
+        />
       ) : (
         <div>Loading</div>
       )}

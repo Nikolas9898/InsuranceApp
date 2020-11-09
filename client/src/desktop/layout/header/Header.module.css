@@ -28,11 +28,38 @@
 .login {
   float: right;
   margin: 26px;
+  display: flex;
+  color: orange;
+}
+.login a {
+  text-decoration: none;
+  color: orange;
+  margin-right: 10px;
+}
+
+.login a:nth-child(2) {
+  text-decoration: none;
+  color: orange;
+  margin-left: 10px;
+}
+
+.login a:hover {
+  text-decoration: underline;
+}
+
+.profile {
+  margin-right: 20px;
+}
+.profile:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.logout a {
   text-decoration: none;
   color: orange;
 }
 
-.login:hover {
+.logout a:hover {
   text-decoration: underline;
-  cursor: pointer;
 }

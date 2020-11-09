@@ -5,10 +5,12 @@ import AdminInsurancePage from "./pages/InsurancePage/InsurancePage";
 import InsuranceContract from "./pages/InsuranceContract/InsuranceContract";
 import ContractsPage from "./pages/ContractsPage/ContractsPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
+import SignUpPage from "./pages/SignUpPage/SignUpPage";
 import { UserProvider } from "./context/UserContext";
 
 import { AuthenticatedRoute } from "./helpers/AuthRoute";
 import { AuthenticatedCustomerRoute } from "./helpers/AuthCustomerRoute";
+import SuccesfulSignInPage from "./pages/SuccefulSignInPage/SuccesfulSignInPage";
 
 const Routes = (props) => {
   return (
@@ -18,8 +20,10 @@ const Routes = (props) => {
           <Route path="/" exact component={HomePage} />
           <Route path="/insurance-contract" component={InsuranceContract} />
           <Route path="/login" component={LoginPage} />
+          <Route path="/sign-up" component={SignUpPage} />
           <Route exact path="/contracts" component={ContractsPage} />
           <Route exact path="/admin/contracts" component={ContractsPage} />
+          <Route exact path="/succesfull" component={SuccesfulSignInPage} />
 
           <AuthenticatedRoute
             path="/admin/insurances"
